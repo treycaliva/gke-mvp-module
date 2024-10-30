@@ -42,6 +42,3 @@ kubectl apply -f validate/
 ```
 kubectl get service whereami -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
-
-##
-Contributor: Trey Caliva <treycaliva@gmail.com>
