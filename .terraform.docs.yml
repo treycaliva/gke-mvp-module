@@ -1,0 +1,13 @@
+formatter: "markdown table"
+
+output:
+  file: "README.md"
+  mode: inject
+  template: |-
+    <!-- BEGIN_AUTOMATED_TF_DOCS_BLOCK -->
+    {{ .Content }}
+    <!-- END_AUTOMATED_TF_DOCS_BLOCK -->
+
+sort:
+  enabled: true
+  by: required
