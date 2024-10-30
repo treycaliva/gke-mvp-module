@@ -27,11 +27,3 @@ output "service_account_emails" {
   value       = module.service_accounts.service_accounts_map
   description = "The email addresses of the created service accounts"
 }
-
-output "kms_key_info" {
-  value = var.cluster.encrypt_gke_secrets ? {
-    key_ring = module.kms[var.cluster.location].keyring
-    key_name = module.kms[var.cluster.location].keys[0]
-  } : null
-  description = "Information about the KMS key used for encrypting GKE secrets (if enabled)"
-}
